@@ -12,13 +12,13 @@ variable "firewall_name" {
 
 variable "ports" {
   description = "port pr port range for the firewall rule"
-  type = "list"
+  type = list(string)
   default = [""]
 }
 
 variable "source_ranges" {
   description = "source IP ranges for firewall rule"
-  type = "list"
+  type = list(string)
   
 }
 

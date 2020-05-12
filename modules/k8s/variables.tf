@@ -20,12 +20,12 @@ variable "external_firewall_name" {
 
 variable "internal_source_ranges" {
     description = "CIDR range for internal firewall rule set"
-    type = "list"
+    type = list(string)
 }
 
 variable "external_source_ranges" {
   description = "CIDR range for the external firewall rule set"
-  type = "list"
+  type = list(string)
 }
 
 variable "worker_count" {

@@ -18,7 +18,7 @@ variable "zone" {
 
 variable "tags" {
   description = "tags for the instance"
-  type = "list"
+  type = list(string)
 }
 
 variable "image" {
@@ -46,7 +46,7 @@ variable "pod_cidr" {
 
 variable "scopes" {
   description = "API scopes to add to the instance"
-  type = "list"
+  type = list(string)
   default = ["compute-rw", "storage-ro", "service-management", "service-control", "logging-write", "monitoring"]
 }
 
