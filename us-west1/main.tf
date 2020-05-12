@@ -5,7 +5,7 @@ provider "google" {
 }
 
 module "k8s" {
-  source = "./modules/k8s"
+  source = "../modules/k8s"
 
   // inputs for network  
   network_name = "kubernetes-the-hard-way"
