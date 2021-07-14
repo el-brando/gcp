@@ -1,5 +1,5 @@
 provider "google" {
-  project = "brandonsgcp"
+  project = "gke-sandbox"
   region  = "us-west1"
   zone    = "us-west1-c"
 }
