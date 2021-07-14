@@ -31,22 +31,3 @@ variable "image_size" {
   default = "200"
 }
 
-variable "subnetwork" {
-  description = "subnet where the instance will be placed"
-}
-
-variable "base_network_ip" {
-  description = "IP address to assign to the worker instance"
-}
-
-variable "pod_cidr" {
-  description = "value for the metadata_key, ex: 10.240.0.0/16"
-  default = ""
-}
-
-variable "scopes" {
-  description = "API scopes to add to the instance"
-  type = list(string)
-  default = ["compute-rw", "storage-ro", "service-management", "service-control", "logging-write", "monitoring"]
-}
-
