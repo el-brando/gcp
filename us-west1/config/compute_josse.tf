@@ -1,7 +1,7 @@
 module "compute_test" {
   source = "../../modules/base/compute/gce_instance"
 
-  base_instance_name = "test"
+  base_instance_name = "josse"
   mcount = "1"
-  tags = ["test"]
+  tags = ["josse"]
 }
