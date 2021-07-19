@@ -1,3 +1,3 @@
-module "gke_container_test"{
+module "gke_cluster_test"{
     source= "../../modules/gke"
 }
