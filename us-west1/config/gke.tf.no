@@ -3,5 +3,5 @@ module "gke_cluster_test"{
 
     name = "test-cluster"
     location = "us-west1"
-    initial_node_count = 3
+    initial_node_count = 1
 }
