@@ -6,9 +6,6 @@ module "gke_cluster_test"{
     name                        = "test-cluster"
     location                    = "us-west1"
 
-    remove_default_node_pool    = true
-    initial_node_count          = 1
-
     node_pool_name              = "my-test-node-pool"
     machine_type                = "e2-small"
     node_count                  = 1 

@@ -15,7 +15,7 @@ variable "initial_node_count"{
 
 variable "remove_default_node_pool"{
     description = "Are you using a separate node pool"
-    default = false
+    default = true
 }
 
 variable "node_pool_name" {
