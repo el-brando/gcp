@@ -10,7 +10,7 @@ resource "google_container_cluster" "primary"{
 
 resource "google_container_node_pool" "primary_pool" {
     name        = var.node_pool_name
-    cluster     = google_container_cluster.primary.name
+    cluster     = google_container_cluster.primary.id
     node_count  = var.node_count
 
     node_config {
