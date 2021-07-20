@@ -31,3 +31,11 @@ variable "node_count"{
     description = "how many nodes per instance group in your separate node pool"
     default = 1
 }
+
+variable "account_id" {
+    description = "service account identifier"
+}
+
+variable "display_name" {
+    description = "service account display name"
+}

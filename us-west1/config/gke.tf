@@ -3,6 +3,9 @@
 module "gke_cluster_test"{
     source = "../../modules/gke"
 
+    account_id      = "gketest01"
+    display_name    = "GKE Test Account"
+
     name            = "test-cluster"
     location        = "us-west1"
     

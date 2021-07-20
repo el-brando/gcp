@@ -1,5 +1,10 @@
 # Resources for GKE Cluster with a separate node pool
 
+resource "google_service_account" "service_account"{
+    account_id      = var.account_id
+    display_name    = var.display_name
+}
+
 resource "google_container_cluster" "primary"{
     name                        = var.name
     location                    = var.location
