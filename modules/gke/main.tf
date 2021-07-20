@@ -1,5 +1,10 @@
 # Resources for GKE Cluster with a separate node pool
 
+resource "google_service_account" "service_account"{
+    account_id      = var.account_id
+    display_name    = var.display_name
+}
+
 resource "google_container_cluster" "primary"{
     name                        = var.name
     location                    = var.location
@@ -15,5 +20,10 @@ resource "google_container_node_pool" "primary_pool" {
 
     node_config {
         machine_type = var.machine_type
+
+        service_account = google_service_account.service_account.email
+        oauth_scopes = [
+            "https://www.googleapis.com/auth/cloud-platform"
+        ]
     }
 }

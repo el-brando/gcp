@@ -1,4 +1,4 @@
-# Outputs for the GKE Cluster with default node pool
+# Outputs for the GKE Cluster with separate node pool
 
 output "name"{
     value = google_container_cluster.primary.*.name
