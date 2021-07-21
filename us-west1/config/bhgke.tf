@@ -16,7 +16,7 @@ resource "google_container_cluster" "primary" {
 
 resource "google_container_node_pool" "primary_preemptible_nodes" {
   name       = "bhcluster_nodepool"
-  cluster    = "bhcluster"
+  cluster    = google_container_cluster.primary.name
   node_count = 1
 
   node_config {
