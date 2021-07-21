@@ -16,7 +16,7 @@ resource "google_container_cluster" "primary" {
 
 resource "google_container_node_pool" "primary_preemptible_nodes" {
   name       = "bhclusternodepool"
-  cluster    = google_container_cluster.primary.id
+  cluster    = google_container_cluster.primary.name
   node_count = 1
 
   node_config {
@@ -29,4 +29,5 @@ resource "google_container_node_pool" "primary_preemptible_nodes" {
       "https://www.googleapis.com/auth/cloud-platform"
     ]
   }
+  depends_on = [google_container_cluster.primary]
 }
