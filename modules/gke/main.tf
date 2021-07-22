@@ -27,5 +27,5 @@ module "create_node_pool"{
     location                    = var.location
     node_count                  = var.node_count
     machine_type                = var.machine_type
-    service_account             = "${resource.google_service_account.service_account.id}"
+    service_account             = $google_service_account.service_account.id
 }
