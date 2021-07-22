@@ -23,7 +23,7 @@ module "create_node_pool"{
     source = "../base/gke/gke_node_pool"
 
     node_pool_name              = var.node_pool_name
-    cluster                     = "${module.create_gke_cluster.name}"
+    cluster                     = "${module.create_gke_cluster.id}"
     location                    = var.location
     node_count                  = var.node_count
     machine_type                = var.machine_type
