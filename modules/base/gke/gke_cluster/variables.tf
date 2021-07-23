@@ -1,6 +1,6 @@
 # Vairables for Google Container Cluster Resource
 
-variable "name"{
+variable "cluster_name"{
     description = "Name for your cluster"
 }
 

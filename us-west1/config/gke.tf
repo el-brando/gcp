@@ -8,7 +8,7 @@ module "gke_cluster_test"{
     display_name                = "GKE Test Account"
 
     # Inputs for google container cluster
-    name                        = "test-cluster"
+    cluster_name                = "test-cluster"
     location                    = "us-west1"
     remove_default_node_pool    = true
     initial_node_count          = 1
