@@ -6,6 +6,7 @@ variable "location"{
 
 variable "cluster"{
     description = "cluster that this node pool belongs to"
+    type = string
 }
 
 variable "service_account"{

@@ -2,6 +2,7 @@
 
 variable "name"{
     description = "Name for your cluster"
+    type = string
 }
 
 variable "location"{
