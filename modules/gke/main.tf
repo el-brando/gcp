@@ -11,7 +11,7 @@ module "create_gke_cluster"{
     account_id                  = var.account_id
     display_name                = var.display_name
 
-    cluster_name                = "${google_container_cluster.primary.name}"
+    cluster_name                = google_container_cluster.primary.name
     location                    = var.location
 
     remove_default_node_pool    = var.remove_default_node_pool
