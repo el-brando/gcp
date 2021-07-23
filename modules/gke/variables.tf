@@ -1,6 +1,6 @@
 # Variables for GKE Cluster with default node pool
 
-variable "name"{
+variable "cluster_name"{
     description = "Name for your cluster"
     type = string
 }

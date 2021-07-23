@@ -1,7 +1,7 @@
 # Resoruce for a google container cluster
 
 resource "google_container_cluster" "primary"{
-    name                        = var.name
+    name                        = var.cluster_name
     location                    = var.location
     
     remove_default_node_pool    = var.remove_default_node_pool

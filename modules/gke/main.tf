@@ -11,7 +11,7 @@ module "create_gke_cluster"{
     account_id                  = var.account_id
     display_name                = var.display_name
 
-    name                        = var.name
+    cluster_name                = var.cluster_name
     location                    = var.location
 
     remove_default_node_pool    = var.remove_default_node_pool
@@ -23,7 +23,7 @@ module "create_node_pool"{
     source = "../base/gke/gke_node_pool"
 
     node_pool_name              = var.node_pool_name
-    cluster                     = module.create_gke_cluster.name
+    cluster                     = "${module.create_gke_cluster.name}"
     location                    = var.location
     node_count                  = var.node_count
     machine_type                = var.machine_type

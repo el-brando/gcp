@@ -1,13 +1,13 @@
 # Outputs for Google Container Cluster Resource
 
 output "name"{
-    value = google_container_cluster.primary.*.name
+    value = google_container_cluster.primary.name
 }
 
 output "location"{
-    value = google_container_cluster.primary.*.location
+    value = google_container_cluster.primary.location
 }
 
 output "id"{
-    value = google_container_cluster.primary.*.id
+    value = google_container_cluster.primary.id
 }
