@@ -7,3 +7,7 @@ output "name"{
 output "location"{
     value = google_container_cluster.primary.*.location
 }
+
+output "id"{
+    value = google_container_cluster.primary.*.id
+}
