@@ -4,7 +4,7 @@ terraform {
     organization = "el-brando"
 
     workspaces {
-      name = "gcp-us-west1"
+      name = "gke_workspace"
     }
   }
 }
