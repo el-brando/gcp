@@ -1,3 +1,3 @@
 module "us-west1"{
-    source = "./uswest-1"
+    source = "./us-west1"
 }
