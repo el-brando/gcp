@@ -14,7 +14,7 @@ module "create_autopilot_cluster"{
     cluster_name                = var.cluster_name
     location                    = var.location
     enable_autopilot            = var.enable_autopilot 
-
+    remove_default_node_pool    = var.remove_default_node_pool
 }
 
 # GKE provisions and managaes node pools, 
