@@ -12,7 +12,7 @@ resource "google_container_cluster" "autopilot"{
 }
 
 module "create_autopilot_cluster"{
-    source                      = "./"
+    source                      = "./gke_autopilot"
     
     account_id                  = var.account_id
     display_name                = var.display_name
