@@ -1,7 +1,7 @@
 # Module for GKE cluster with separate node pool
 
 module "gke_cluster_test"{
-    source = "../../modules/gke"
+    source = "./modules/gke"
     
     # Inputs for google service account
     account_id                  = "gketest01"
