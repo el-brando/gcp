@@ -5,8 +5,13 @@ resource "google_service_account" "service_account"{
     display_name    = var.display_name
 }
 
+resource "google_container_cluster" "autopilot"{
+    name                        = var.cluster_name
+    location                    = var.location
+    enable_autopilot            = var.enable_autopilot  
+}
+
 module "create_autopilot_cluster"{
-    source = "../base/gke/gke_cluster"
 
     account_id                  = var.account_id
     display_name                = var.display_name
@@ -14,7 +19,6 @@ module "create_autopilot_cluster"{
     cluster_name                = var.cluster_name
     location                    = var.location
     enable_autopilot            = var.enable_autopilot 
-    remove_default_node_pool    = var.remove_default_node_pool
 }
 
 # GKE provisions and managaes node pools, 
