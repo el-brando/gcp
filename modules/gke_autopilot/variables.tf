@@ -14,6 +14,11 @@ variable "enable_autopilot" {
     default = true
 }
 
+variable "remove_default_node_pool"{
+    description = "Are you using a separate node pool"
+    default = false
+}
+
 variable "account_id" {
     description = "service account identifier"
 }
