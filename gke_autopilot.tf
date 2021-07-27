@@ -10,5 +10,4 @@ module "gke_autopilot_test"{
     # Inputs for google container cluster
     cluster_name                = "test-cluster"
     location                    = "us-west1"
-    enable_autopilot            = true
 }

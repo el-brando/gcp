@@ -9,11 +9,6 @@ variable "location"{
     description = "What region/zone is your cluster located in"
 }
 
-variable "enable_autopilot" {
-    description = "Use Autopilot mode clusters"
-    default = true
-}
-
 variable "account_id" {
     description = "service account identifier"
 }
