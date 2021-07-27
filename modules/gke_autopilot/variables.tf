@@ -1,7 +1,8 @@
-# Vairables for Google Container Cluster Resource
+# Variables for GKE Autopilot Cluster with default node pool
 
 variable "cluster_name"{
     description = "Name for your cluster"
+    type = string
 }
 
 variable "location"{
@@ -10,16 +11,6 @@ variable "location"{
 
 variable "enable_autopilot" {
     description = "Use Autopilot mode clusters"
-    default = false
-}
-
-variable "initial_node_count"{
-    description = "number of nodes in the default node pool"
-    default = 1
-}
-
-variable "remove_default_node_pool"{
-    description = "Are you using a separate node pool"
     default = true
 }
 
