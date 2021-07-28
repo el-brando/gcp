@@ -16,7 +16,10 @@ module "create_gke_cluster"{
 
     remove_default_node_pool    = var.remove_default_node_pool
     initial_node_count          = var.initial_node_count
-
+    cluster_autoscaling_enabled = var.cluster_autoscaling_enabled
+    minimum_cpu_vcores          = var.minimum_cpu_vcores
+    maximum_cpu_vcores          = var.maximum_cpu_vcores
+    maximum_memory              = var.maximum_memory
 }
 
 module "create_node_pool"{
