@@ -12,6 +12,10 @@ module "gke_cluster_test"{
     location                    = "us-west1"
     remove_default_node_pool    = true
     initial_node_count          = 1
+    cluster_autoscaling_enabled = true
+    minimum_cpu_vcores          = 6
+    maximum_cpu_vcores          = 12
+    maximum_memory              = 64
     
     # Inputs for separate node pool
     node_pool_name              = "my-test-node-pool"
