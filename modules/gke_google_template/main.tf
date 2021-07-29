@@ -10,7 +10,7 @@ module "gke" {
   subnetwork                    = var.subnetwork
   ip_range_pods                 = var.ip_range_pods
   ip_range_services             = var.ip_range_services
-  https_load_balancing          = false
+  http_load_balancing           = false
   horizontal_pod_autoscaling    = true
   network_policy                = false
   create_service_account        = true
