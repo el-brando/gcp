@@ -17,17 +17,17 @@ output "location" {
 }
 
 output "horizontal_pod_autoscaling_enabled" {
-  value = module.gke.horizontal_pod_autoscaling
+  value = module.gke.horizontal_pod_autoscaling_enabled
 }
 
 output "http_load_balancing_enabled" {
-  value = module.gke.http_load_balancing
+  value = module.gke.http_load_balancing_enabled
 }
 
 output "network_policy_enabled" {
-  value = module.gke.network_policy
+  value = module.gke.network_policy_enabled
 }
 
-output "node_pool_names" {
-  value = module.gke.node_pools.name
+output "node_pools_names" {
+  value = module.gke.node_pools_names
 }
