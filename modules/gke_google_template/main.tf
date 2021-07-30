@@ -11,8 +11,8 @@ provider "kubernetes" {
 
 
 module "gke" {
-  source                        = "https://github.com/terraform-google-modules/terraform-google-kubernetes-engine?ref=master"
-
+  #source                        = "https://github.com/terraform-google-modules/terraform-google-kubernetes-engine?ref=master"
+  source                        = "terraform-google-modules/kubernetes-engine/google"
   project_id                    = var.project_id
   name                          = var.cluster_name
   region                        = var.region
