@@ -9,6 +9,6 @@ module "gke_google_template"{
     region                  = "us-west1"
     network                 = "kubenetwork"
     subnetwork              = "kubesubnet"
-    ip_range_pods           = "kupepods"
+    ip_range_pods           = "kubepods"
     ip_range_services       = "kubeservices"
 }
