@@ -1,5 +1,13 @@
 # Module for GKE Google Template (Managed by Google)
 
+data "google_client_config" "default" {}
+
+provider "kubernetes" {
+  host                   = "https://${module.gke.endpoint}"
+  token                  = data.google_client_config.default.access_token
+  cluster_ca_certificate = base64decode(module.gke.ca_certificate)
+}
+
 module "gke_google_template"{
 
     source                  = "./modules/gke_google_template"
