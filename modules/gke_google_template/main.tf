@@ -86,3 +86,51 @@ module "gke" {
     ]
   }
 }
+
+
+# Resrouces for deploying a sample nginx server
+
+resource "kubernetes_pod" "test-pod"{
+  metadata {
+    name = "nginx-pod-example"
+
+    labels = {
+      maintained_by = "terraform"
+      app           = "nginx-example"
+    }
+  }
+
+  spec {
+    container{
+      image = "nginx:1.7.9"
+      name = "nginx-example"
+    }
+  }
+
+  depends_on = [module.gke]
+}
+
+resource "kubernetes_service" "test-service"{
+  metadata {
+    name = "nginx-service-example"
+  }
+
+  spec {
+    selector = {
+      app = kubernetes_pod.test-pod.metadata.0.labels.app
+    }
+
+    session_affinity = "ClientIP"
+
+    port {
+      port        = 8080
+      target_port = 80
+    } 
+
+    type = "LoadBalancer"
+
+  }
+
+  depends_on = [module.gke]
+
+}
